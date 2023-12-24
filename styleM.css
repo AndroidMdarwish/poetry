@@ -1,0 +1,253 @@
+/* اتجاه النص والعناصر اليميني (RTL) */
+html, body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Cairo', sans-serif;
+    font-size: 27px;
+    color: #346339;
+    background-color: #65625425;
+    text-shadow: 
+        1px 2px 1px #346339b8,
+        1px 3px 1px #ffffff,
+        3px 1px 4px #22282289;
+}
+
+p.cntr{
+    text-align: center;
+    font-size: larger;
+    color: #fd0606;
+}
+
+p.box{
+    border: #6f526c 3px solid;
+    border-style: dashed;
+    margin: 2px;
+    background-color: #6f526c34;
+}
+/* logo */
+.logo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo img{
+    width: 20%;
+}
+
+img.dr {
+    width: 130px;
+}
+
+p,dd{
+    box-shadow:1px 1px 1px 1px #5a7e5dc2;
+    margin: 3px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+
+}
+/* العنوان */
+.type{
+    font-size: 40px;
+    text-align: center;
+    border: 2px solid #EAD16C;
+    /* border-radius: 10px; */
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+}
+
+.type2{
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid #EAD16C;
+    width: vw;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    background-color: #ead16c8a;
+}
+
+/* تنسيق العائلة باستخدام قائمة غير مرتبة */
+.family-tree {
+    list-style-type:none;
+    padding-left: 0;
+}
+
+.person {
+    border: 2px solid #EAD16C;
+    /* border-radius: 10px; */
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    border-right:10px solid #5a7e5d9f;
+}
+
+/* 
+    .person .name {
+        font-weight: bold;
+    }
+*/
+
+/*head data*/
+.headdata {
+    font-weight: bold;
+    text-align: center;
+    width:vw;
+    border: 2px solid #EAD16C;
+    border-radius: 30px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    box-shadow:0px 2px 2px 2px #5a7e5d;
+    background-color: #EAD16C;
+}
+
+.person .spouse::before {
+    content: " ";
+}
+
+/* الأطفال مخفيين افتراضيًا */
+.children {
+    display: none;
+}
+
+/* تمدد الاطفال عندما يتم النقر علي الزر */
+:target .children {
+    display: block;
+}
+
+/* تمتد الأطفال عندما يتم تحديد الصندوق (checkbox) */
+input[type="checkbox"]:checked ~ .children {
+    display: block;
+    background-color: #a1c0a37c;
+    box-shadow: 3px 3px 2px 1px #81647e;
+    border-radius: 2px;
+    
+}
+
+input[type="checkbox"]:checked label{
+    background-color: #a1c0a35e;
+}
+
+input[type="checkbox"]{
+    display:none;
+    width: 100%;
+}
+
+/* تمثيل علامة التبديل */
+label {
+    cursor: pointer;
+    color: blue;
+    position:relative;
+    display:flex;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    box-shadow: 3px 3px 2px 1px #81647e;
+    transition: transform 0.9s ease;
+}
+
+details{
+    font-size: 16px;
+    color: #fd0606;
+    cursor:pointer;
+}
+label:active{
+    transform: rotatex(360deg);
+}
+
+/* الشكل المتغير */
+/* 
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+} 
+*/
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+th,tr{
+    text-align: center;
+}
+
+th{
+    background-color: #6f526c6e;
+}
+
+.redtitle,.r{
+    color: #fd0606;
+}
+
+.o{
+    background-color: #fd9606;
+}
+
+.y{
+    background-color: #e4fd06;
+}
+
+.g{
+    background-color: #06fd0e;
+}
+
+label{
+    background-color: #a8d4acc8;
+    width:99%;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-width: 1px;
+    box-shadow: 3px 3px 2px 1px #5a7e5d;
+}
+
+label:hover{
+    background-color: #a1c0a3c8;
+    box-shadow: 3px 3px 2px 1px #6f526c;
+}
+
+table,tr,td,th{
+    border: solid #6f526c 1px;
+    column-gap: 0px;
+    box-shadow: 2px 2px 1px 1px #6f526cba;
+}
+
+table .bl tr,.bl td
+{
+    border: none;
+}
+
+details{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 
+input[type="checkbox"]:checked{
+    background-color: #a1c0a3c8;
+    width: 99%;
+    align-self: flex-end;
+    border-radius: 10px;
+    border-width: 1px;
+    box-shadow: 3px 3px 3px 3px #526f55;
+}
